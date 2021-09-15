@@ -6,7 +6,7 @@ public class CobaVar {
         int beratBadan = 57;
         System.out.println("Nama Saya " + namaDepan);
         System.out.println("Umur Saya " + umur);
-        System.out.println("Tinggi Saya " + tinggiBadan);
+        System.out.println("Tinggi Saya " + (int)tinggiBadan);
         System.out.println("Berat Badan Saya " + beratBadan);
     }  
 }
