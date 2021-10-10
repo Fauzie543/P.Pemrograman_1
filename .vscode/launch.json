@@ -1,0 +1,71 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch BelajarPerulanganIf",
+            "request": "launch",
+            "mainClass": "BelajarPerulanganIf",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarPerulangan",
+            "request": "launch",
+            "mainClass": "BelajarPerulangan",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tugas6",
+            "request": "launch",
+            "mainClass": "Tugas6",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarNestedif",
+            "request": "launch",
+            "mainClass": "BelajarNestedif",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch StringOops",
+            "request": "launch",
+            "mainClass": "StringOops",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch pr",
+            "request": "launch",
+            "mainClass": "pr",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pr",
+            "request": "launch",
+            "mainClass": "Pr",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tugas5",
+            "request": "launch",
+            "mainClass": "Tugas5",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
