@@ -6,6 +6,83 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Siakad",
+            "request": "launch",
+            "mainClass": "Siakad",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProgramDataMahasiswa",
+            "request": "launch",
+            "mainClass": "ProgramDataMahasiswa",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarArray",
+            "request": "launch",
+            "mainClass": "BelajarArray",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tugas9",
+            "request": "launch",
+            "mainClass": "Tugas9",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarMethod",
+            "request": "launch",
+            "mainClass": "BelajarMethod",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tugas7",
+            "request": "launch",
+            "mainClass": "Tugas7",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch AgeCheck",
+            "request": "launch",
+            "mainClass": "AgeCheck",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarForPola2",
+            "request": "launch",
+            "mainClass": "BelajarForPola2",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarForPola1",
+            "request": "launch",
+            "mainClass": "BelajarForPola1",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarForPola",
+            "request": "launch",
+            "mainClass": "BelajarForPola",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
+            "name": "Launch BelajarFor",
+            "request": "launch",
+            "mainClass": "BelajarFor",
+            "projectName": "P.Pemrograman_1_1d963431"
+        },
+        {
+            "type": "java",
             "name": "Launch BelajarPerulanganIf",
             "request": "launch",
             "mainClass": "BelajarPerulanganIf",
