@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Siakad {
     Mahasiswa[] mahasiswa = new Mahasiswa[1000];
     private int jumlahData = 0;
@@ -7,7 +8,7 @@ public class Siakad {
         
         Siakad siakad = new Siakad();
         int menu = 0;
-        while (menu!=9) {
+        while (menu!=8) {
             menu = tampilanMenu();
             if (menu==1) {
                 siakad.lihatData();
@@ -20,6 +21,8 @@ public class Siakad {
             } else if (menu==5) {
                 siakad.editNama();
             } else if (menu==6) {
+                siakad.editNIM();
+            } else if (menu==7) {
                 siakad.hapusData();
             }
         }
@@ -27,19 +30,20 @@ public class Siakad {
 
     private static int tampilanMenu() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("....Menu Siakad....");
+        System.out.println(" ");
+        System.out.println("....<Menu Siakad>....");
         System.out.println(" ");
         System.out.println("1. Lihat Data");
         System.out.println("2. Tambah Data");
         System.out.println("3. Cari Data");
         System.out.println("4. Rerata IPK");
         System.out.println("5. Edit Nama");
-        System.out.println("6. Hapus Data");
-        System.out.println("9. Keluar");
+        System.out.println("6. Edit NIM");
+        System.out.println("7. Hapus Data");
+        System.out.println("8. Keluar");
         System.out.print("Pilih menu = ");
         int menu = scan.nextInt();
-        return menu;
-        
+        return menu;     
     }
 
     private void lihatData() {
@@ -57,21 +61,17 @@ public class Siakad {
     private void tambahData() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Masukan NIM mahasiswa = ");
-        String nim = scan.nextLine();
+         String nim = scan.nextLine();
         System.out.print("Masukan nama mahasiswa = ");
-        String nama = scan.nextLine();
+         String nama = scan.nextLine();
         double ipk = 0;
-        double tinggi = 0;
         try {
-            System.out.print("Masukan IPK mahasiswa = ");
-            ipk = scan.nextDouble();
-            System.out.print("Masukan Tinggi Badan mahasiswa = ");
-            tinggi = scan.nextDouble();
+             System.out.print("Masukan IPK mahasiswa = ");
+             ipk = scan.nextDouble();
         } catch (Exception e) {
-            System.out.println("Anda harus memasukan bilangan desimal dengan menggunakan tanda titik. Silahkan edit IPK atau tinggi anda setelah input data");
+            System.out.println("Anda harus memasukan bilangan desimal dengan menggunakan tanda titik. Silahkan edit IPK anda setelah input data");
         }
-        Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk);
-        inputMahasiswa.setTinggiBadang(tinggi);
+         Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
         lihatData();
@@ -110,8 +110,33 @@ public class Siakad {
             System.out.print("Masukan Nama mahasiswa yang baru = ");
             String nama = scan.nextLine();
             mahasiswa[index].setNama(nama);
-            mahasiswa[index].getDetail();
+            mahasiswa[index].getDetail();         
         }
+    }
+
+    public void editNIM() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Masukan nama mahasiswa yang akan diedit = ");
+        String nama = scan.nextLine();
+        int index = getIndexByNama(nama);
+        if (index==-1) {
+            System.out.println("Nama yang anda akan edit tidak ketemu");
+        } else {
+            mahasiswa[index].getDetail();
+            System.out.print("Masukan NIM mahasiswa yang baru = ");
+            String nim = scan.nextLine();
+            mahasiswa[index].setNIM(nim);
+            mahasiswa[index].getDetail();           
+        }
+    }
+
+    public int getIndexByNama(String nama) {
+        for (int i=0; i<jumlahData; i++) {
+            if (mahasiswa[i].getNama().equals(nama)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public void hapusData() {

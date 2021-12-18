@@ -1,4 +1,4 @@
-public class Mahasiswa extends Manusia {
+public class Mahasiswa extends Siakad {
     private String nim;
     private String nama;
     private double ipk;
@@ -34,10 +34,10 @@ public class Mahasiswa extends Manusia {
     }
 
     public void getDetail() {
-        System.out.printf("%10s %10s %5s %20s", "NIM", "NAMA", "IPK", "TINGGI BADAN");
+        System.out.printf("%7s %17s %14s", "NIM", "NAMA", "IPK" );
         System.out.println();
-        System.out.println("----------------------------------------------------------------------");
-        System.out.printf("%10s %10s %5s %15s", this.nim, this.nama.toUpperCase(), String.valueOf(this.ipk), String.valueOf(this.tinggiBadan));
+        System.out.println("-----------------------------------------------");
+        System.out.printf("%10s %22s %6s", this.nim, this.nama.toUpperCase(), String.valueOf(this.ipk));
         System.out.println();
     }
 
