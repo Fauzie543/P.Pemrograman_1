@@ -1,3 +1,8 @@
+//Nama  : Sri Fauzie Kurniawan
+//NIM   : 21537144030
+//Kelas : J2
+//Prodi : Teknologi Informasi
+
 import java.util.Scanner;
 
 public class Siakad {
