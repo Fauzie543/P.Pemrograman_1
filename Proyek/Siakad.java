@@ -8,7 +8,7 @@ public class Siakad {
         
         Siakad siakad = new Siakad();
         int menu = 0;
-        while (menu!=8) {
+        while (menu!=9) {
             menu = tampilanMenu();
             if (menu==1) {
                 siakad.lihatData();
@@ -17,12 +17,14 @@ public class Siakad {
             } else if (menu==3) {
                 siakad.cariDataByNIM();
             } else if (menu==4) {
-                siakad.rerataIPK();
-            } else if (menu==5) {
                 siakad.editNama();
-            } else if (menu==6) {
+            } else if (menu==5) {
                 siakad.editNIM();
+            } else if (menu==6) {
+                siakad.editSemester();
             } else if (menu==7) {
+                siakad.rerataIPK();
+            } else if (menu==8) {
                 siakad.hapusData();
             }
         }
@@ -31,16 +33,17 @@ public class Siakad {
     private static int tampilanMenu() {
         Scanner scan = new Scanner(System.in);
         System.out.println(" ");
-        System.out.println("....<Menu Siakad>....");
+        System.out.println("----< Menu Siakad >----");
         System.out.println(" ");
         System.out.println("1. Lihat Data");
         System.out.println("2. Tambah Data");
         System.out.println("3. Cari Data");
-        System.out.println("4. Rerata IPK");
-        System.out.println("5. Edit Nama");
-        System.out.println("6. Edit NIM");
-        System.out.println("7. Hapus Data");
-        System.out.println("8. Keluar");
+        System.out.println("4. Edit Nama");
+        System.out.println("5. Edit NIM");
+        System.out.println("6. Edit Semester");
+        System.out.println("7. Rerata IPK");
+        System.out.println("8. Hapus Data");
+        System.out.println("9. Keluar");
         System.out.print("Pilih menu = ");
         int menu = scan.nextInt();
         return menu;     
@@ -64,6 +67,8 @@ public class Siakad {
          String nim = scan.nextLine();
         System.out.print("Masukan nama mahasiswa = ");
          String nama = scan.nextLine();
+         System.out.print("Masukan Semester mahasiswa = ");
+         String semester = scan.nextLine();
         double ipk = 0;
         try {
              System.out.print("Masukan IPK mahasiswa = ");
@@ -71,7 +76,7 @@ public class Siakad {
         } catch (Exception e) {
             System.out.println("Anda harus memasukan bilangan desimal dengan menggunakan tanda titik. Silahkan edit IPK anda setelah input data");
         }
-         Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk);
+         Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk, semester);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
         lihatData();
@@ -137,6 +142,22 @@ public class Siakad {
             }
         }
         return -1;
+    }
+
+    public void editSemester() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Masukan NIM mahasiswa yang akan diedit = ");
+        String nim = scan.nextLine();
+        int index = getIndexByNIM(nim);
+        if (index==-1) {
+            System.out.println("NIM yang anda akan edit tidak ketemu");
+        } else {
+            mahasiswa[index].getDetail();
+            System.out.print("Masukan semester mahasiswa yang baru = ");
+            String semester = scan.nextLine();
+            mahasiswa[index].setSemester(semester);
+            mahasiswa[index].getDetail();         
+        }
     }
 
     public void hapusData() {
