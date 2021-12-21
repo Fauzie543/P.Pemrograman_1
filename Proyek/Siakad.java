@@ -72,8 +72,10 @@ public class Siakad {
          String nim = scan.nextLine();
         System.out.print("Masukan nama mahasiswa = ");
          String nama = scan.nextLine();
-         System.out.print("Masukan Semester mahasiswa = ");
+        System.out.print("Masukan Semester mahasiswa = ");
          String semester = scan.nextLine();
+         System.out.print("Masukan Jurusan mahasiswa = ");
+         String jurusan = scan.nextLine();
         double ipk = 0;
         try {
              System.out.print("Masukan IPK mahasiswa = ");
@@ -81,7 +83,7 @@ public class Siakad {
         } catch (Exception e) {
             System.out.println("Anda harus memasukan bilangan desimal dengan menggunakan tanda titik. Silahkan edit IPK anda setelah input data");
         }
-         Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk, semester);
+         Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk, semester, jurusan);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
         lihatData();
